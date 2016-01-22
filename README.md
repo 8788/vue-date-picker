@@ -1,4 +1,4 @@
-# vue-date-picker ![npm package](https://img.shields.io/npm/v/vue-date-picker.svg)
+# vue-date-picker [![npm package](https://img.shields.io/npm/v/vue-date-picker.svg)](https://www.npmjs.com/package/vue-date-picker)
 
 > datepicker component for Vue.js.
 
