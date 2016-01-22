@@ -1,6 +1,7 @@
-<style lang="sass">
+<style scoped>
 .datetime-picker {
     position: relative;
+    display: inline-block;
     font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei";
     -webkit-font-smoothing: antialiased;
     color: #333;
@@ -21,6 +22,7 @@
 
 .datetime-picker .picker-wrap {
     position: absolute;
+    z-index: 1000;
     width: 238px;
     height: 280px;
     margin-top: 2px;
@@ -38,6 +40,7 @@
 
 .datetime-picker tr {
     height: 34px;
+    border: 0 none;
 }
 
 .datetime-picker th, .datetime-picker td {
@@ -45,7 +48,9 @@
     width: 34px;
     height: 34px;
     padding: 0;
+    border: 0 none;
     line-height: 34px;
+    text-align: center;
 }
 
 .datetime-picker td {
@@ -146,7 +151,7 @@
 <script>
     export default {
         props: {
-            width: {type: String, default: '238px' },
+            width: { type: String, default: '238px' },
             readonly: { type: Boolean, default: false },
             value: { type: String, default: '' },
             format: { type: String, default: 'YYYY-MM-DD' }
