@@ -1,4 +1,4 @@
-# vue-date-picker
+# vue-date-picker ![npm package](https://img.shields.io/npm/v/vue-date-picker.svg)
 
 > datepicker component for Vue.js.
 
@@ -13,12 +13,12 @@
 # Instllation
 
 ## npm 
-```
+``` bash
 $ npm install vue-date-picker
 ```
 
 # Usage
-```html
+``` html
 <template>
     <datepicker :readonly="true" format="YYYY-MM-DD"></datepicker>
     <datepicker format="YYYY-M-D" value="2015-9-5"></datepicker>
@@ -26,7 +26,7 @@ $ npm install vue-date-picker
 </template>
 
 <script>
-import datepicker from './datepicker.vue';
+import datepicker from 'vue-date-picker';
 
 export default {
     components: { datepicker }
