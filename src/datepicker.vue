@@ -253,18 +253,19 @@
                 return format.replace(/Y+|M+|D+/g, function (str) {
                     return map[str];
                 });
+            },
+            leave (e) {
+                if (!this.$el.contains(e.target)) {
+                    this.close();
+                }
             }
         },
         ready () {
             this.now = this.parse(this.value) || new Date();
-            document.addEventListener('click', (e) => {
-                if (!this.$el.contains(e.target)) {
-                    this.close();
-                }
-            }, false);
+            document.addEventListener('click', this.leave, false);
         },
         beforeDestroy () {
-            document.removeEventListener('click', this.close, false);
+            document.removeEventListener('click', this.leave, false);
         }
     };
 </script>
