@@ -112,6 +112,7 @@
     <div class="datetime-picker" :style="{ width: width }">
         <input
             type="text"
+            name="{{name}}"
             :style="styleObj"
             :readonly="readonly"
             :value="value"
@@ -154,7 +155,8 @@
             width: { type: String, default: '238px' },
             readonly: { type: Boolean, default: false },
             value: { type: String, default: '' },
-            format: { type: String, default: 'YYYY-MM-DD' }
+            format: { type: String, default: 'YYYY-MM-DD' },
+            name: { type: String, default: '' }
         },
         data () {
             return {
