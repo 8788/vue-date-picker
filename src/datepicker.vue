@@ -115,7 +115,7 @@
             name="{{name}}"
             :style="styleObj"
             :readonly="readonly"
-            :value="value"
+            :value="pickedValue"
             @click="show = !show">
         <div class="picker-wrap" v-show="show">
             <table class="date-picker">
@@ -164,7 +164,8 @@
                 days: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
                 months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 date: [],
-                now: new Date()
+                now: new Date(),
+                pickedValue: ''
             };
         },
         watch: {
@@ -198,7 +199,7 @@
                 time.setMonth(time.getMonth() + 2, 0);       // the last day of this month
                 var curDayCount = time.getDate();
                 time.setDate(1);                             // fix bug when month change
-                var value = this.value || this.stringify(new Date());
+                var value = this.pickedValue || this.stringify(new Date());
                 for (let i = 0; i < curDayCount; i++) {
                     let tmpTime = new Date(time.getFullYear(), time.getMonth(), i + 1);
                     let status = '';
@@ -232,7 +233,7 @@
             pickDate (index) {
                 this.show = false;
                 this.now = new Date(this.date[index].time);
-                this.value = this.stringify();
+                this.pickedValue = this.stringify();
             },
             parse (str) {
                 var time = new Date(str);
@@ -262,9 +263,12 @@
                 }
             }
         },
-        ready () {
-            this.now = this.parse(this.value) || new Date();
-            document.addEventListener('click', this.leave, false);
+        mounted () {
+            this.pickedValue = this.value;
+            this.$nextTick((){
+                this.now = this.parse(this.pickedValue) || new Date();
+                document.addEventListener('click', this.leave, false);
+            });
         },
         beforeDestroy () {
             document.removeEventListener('click', this.leave, false);
