@@ -156,7 +156,8 @@
             readonly: { type: Boolean, default: false },
             value: { type: String, default: '' },
             format: { type: String, default: 'YYYY-MM-DD' },
-            name: { type: String, default: '' }
+            name: { type: String, default: '' },
+            styleObj: { type: Object, default: {}}
         },
         data () {
             return {
