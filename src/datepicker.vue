@@ -227,7 +227,7 @@
                 this.now = new Date(this.now);
             },
             monthClick (flag) {
-                this.now.setMonth(this.now.getMonth() + flag);
+                this.now.setMonth(this.now.getMonth() + flag, 1);
                 this.now = new Date(this.now);
             },
             pickDate (index) {
