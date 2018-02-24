@@ -157,7 +157,7 @@
             value: { type: String, default: '' },
             format: { type: String, default: 'YYYY-MM-DD' },
             name: { type: String, default: '' },
-            styleObj: { type: Object, default: {}}
+            styleObj: { type: Object, default: {} }
         },
         data () {
             return {
@@ -228,7 +228,7 @@
                 this.now = new Date(this.now);
             },
             monthClick (flag) {
-                this.now.setMonth(this.now.getMonth() + flag);
+                this.now.setMonth(this.now.getMonth() + flag, 1);
                 this.now = new Date(this.now);
             },
             pickDate (index) {
