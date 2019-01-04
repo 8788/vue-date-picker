@@ -1,10 +1,8 @@
-import Vue from 'vue';
-import App from './demo';
+import Vue from 'vue'
+import Demo from './demo.vue'
 
-Vue.config.debug = true;
+Vue.config.productionTip = false
 
-/* eslint-disable no-new */
 new Vue({
-    el: 'body',
-    components: { App }
-});
+  render: h => h(Demo)
+}).$mount('#app')
