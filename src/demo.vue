@@ -1,8 +1,8 @@
 <template>
   <div>
-    <datepicker :readonly="true" format="YYYY-MM-DD"></datepicker>
-    <datepicker format="YYYY-M-D" value="2015-9-5"></datepicker>
-    <datepicker :readonly="true" format="MMM/D/YYYY" width="300px" name="date"></datepicker>
+    <datepicker :readonly="true" format="YYYY-MM-DD" name="date1"></datepicker>
+    <datepicker value="2015-9-5" format="YYYY-M-D" name="date2"></datepicker>
+    <datepicker :readonly="true" format="MMM/D/YYYY" name="date3"></datepicker>
   </div>
 </template>
 

@@ -12,7 +12,7 @@
 }
 
 .datetime-picker input {
-  width: 100%;
+  width: 238px;
   padding: 5px 10px;
   height: 30px;
   outline: 0 none;
@@ -109,11 +109,12 @@
 </style>
 
 <template>
-  <div class="datetime-picker" :style="{ width: width }">
+  <div class="datetime-picker">
     <input
         type="text"
         :name="name"
-        :style="styleObj"
+        :style="inputStyle"
+        :class="inputClass"
         :readonly="readonly"
         :value="pickedValue"
         @click="show = !show">
@@ -153,12 +154,12 @@
 <script>
 export default {
   props: {
-    width: { type: String, default: '238px' },
     readonly: { type: Boolean, default: false },
     value: { type: String, default: '' },
     format: { type: String, default: 'YYYY-MM-DD' },
     name: { type: String, default: '' },
-    styleObj: { type: Object, default: () => {} }
+    inputStyle: [Object, Array],
+    inputClass: [Object, Array]
   },
   data () {
     return {
