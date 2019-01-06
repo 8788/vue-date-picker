@@ -16,6 +16,10 @@
   "bugs": {
     "url": "https://github.com/8788/vue-date-picker/issues"
   },
+  "files": [
+    "src/datepicker.vue",
+    "README.md"
+  ],
   "keywords": [
     "vue",
     "datepicker",
