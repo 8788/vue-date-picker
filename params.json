@@ -1,6 +1,0 @@
-{
-  "name": "Vue-date-picker",
-  "tagline": "datepicker component for Vue.js",
-  "body": "# vue-date-picker [![npm package](https://img.shields.io/npm/v/vue-date-picker.svg)](https://www.npmjs.com/package/vue-date-picker)\r\n\r\n> datepicker component for Vue.js.\r\n\r\n# screenshot\r\n\r\n![screenshot](screenshot.png)\r\n\r\n# Requirements\r\n\r\n- [Vue.js](https://github.com/yyx990803/vue) `^1.0.0`\r\n\r\n# Instllation\r\n\r\n## npm \r\n``` bash\r\n$ npm install vue-date-picker\r\n```\r\n\r\n# Usage\r\n``` html\r\n<template>\r\n    <datepicker :readonly=\"true\" format=\"YYYY-MM-DD\"></datepicker>\r\n    <datepicker format=\"YYYY-M-D\" value=\"2015-9-5\"></datepicker>\r\n    <datepicker :readonly=\"true\" format=\"MMM/D/YYYY\" width=\"300px\"></datepicker>\r\n</template>\r\n\r\n<script>\r\nimport datepicker from 'vue-date-picker';\r\n\r\nexport default {\r\n    components: { datepicker }\r\n};\r\n</script>\r\n```\r\n\r\n# License\r\n\r\n[The MIT License](http://opensource.org/licenses/MIT)",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
