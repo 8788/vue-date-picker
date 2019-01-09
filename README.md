@@ -2,19 +2,20 @@
 
 [![npm version][npm-image]][npm-url] [![david deps][david-image]][david-url] [![npm license][license-image]][download-url]
 
-datepicker component for Vue 2.0
+datepicker component for Vue 2.x
 
-# screenshot
+## Screenshot
 
 ![screenshot](screenshot.png)
 
-# Instllation
+## Instllation
 
 ```bash
 $ npm install vue-date-picker --save
 ```
 
-# Usage
+## Usage
+
 ```html
 <template>
   <div class="demo">
@@ -33,7 +34,18 @@ export default {
 </script>
 ```
 
-# License
+## Prop
+
+| Prop                          | Type               | Default     | Description                              |
+|-------------------------------|--------------------|:-----------:|------------------------------------------|
+| value                         | String             | --          | Date value of the datepicker             |
+| name                          | String             | --          | Input name property                      |
+| format                        | String             | YYYY-MM-DD  | Date formatting string                   |
+| readonly                      | String             | false       | Input readonly property                  |
+| input-class                   | Array\|Object      | --          | Binding class for input                  |
+| input-style                   | Array\|Object      | --          | Binding inline style for input           |
+
+## License
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
