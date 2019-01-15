@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import datepicker from './datepicker.vue'
+import datepicker from './vue-date-picker.vue'
 
 export default {
   components: { datepicker }
