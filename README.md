@@ -26,10 +26,12 @@ $ npm install vue-date-picker --save
 </template>
 
 <script>
-import datepicker from 'datepicker'
+import datepicker from 'vue-date-picker'
 
 export default {
-  components: { datepicker }
+  components: {
+    datepicker
+  }
 }
 </script>
 ```
