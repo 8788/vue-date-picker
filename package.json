@@ -18,7 +18,7 @@
     "url": "https://github.com/8788/vue-date-picker/issues"
   },
   "files": [
-    "src/datepicker.vue",
+    "src/vue-date-picker.vue",
     "dist/vue-date-picker.common.js",
     "dist/vue-date-picker.umd.js"
   ],
