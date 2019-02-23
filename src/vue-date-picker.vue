@@ -84,13 +84,13 @@
 
 .datetime-picker .show-year {
   display: inline-block;
-  min-width: 62px;
+  min-width: 66px;
   vertical-align: middle;
 }
 
 .datetime-picker .show-month {
   display: inline-block;
-  min-width: 28px;
+  min-width: 32px;
   vertical-align: middle;
 }
 
@@ -98,8 +98,27 @@
 .datetime-picker .btn-next {
   cursor: pointer;
   display: inline-block;
-  padding: 0 10px;
-  vertical-align: middle;
+  padding: 0 11px;
+}
+
+.datetime-picker .btn-prev::after,
+.datetime-picker .btn-next::after {
+  position: relative;
+  content: "";
+  left: 2px;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transform: rotate(-45deg);
+}
+
+.datetime-picker .btn-next::after {
+  left: -2px;
+  border: 0 none;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 .datetime-picker .btn-prev:hover,
@@ -123,14 +142,14 @@
         <thead>
           <tr class="date-head">
             <th colspan="4">
-              <span class="btn-prev" @click="yearClick(-1)">&lt;</span>
+              <span class="btn-prev" @click="yearClick(-1)"></span>
               <span class="show-year">{{now.getFullYear()}}</span>
-              <span class="btn-next" @click="yearClick(1)">&gt;</span>
+              <span class="btn-next" @click="yearClick(1)"></span>
             </th>
             <th colspan="3">
-              <span class="btn-prev" @click="monthClick(-1)">&lt;</span>
+              <span class="btn-prev" @click="monthClick(-1)"></span>
               <span class="show-month">{{months[now.getMonth()]}}</span>
-              <span class="btn-next" @click="monthClick(1)">&gt;</span>
+              <span class="btn-next" @click="monthClick(1)"></span>
             </th>
           </tr>
           <tr class="date-days">
