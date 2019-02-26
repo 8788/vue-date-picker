@@ -2,11 +2,11 @@
   "name": "vue-date-picker",
   "version": "2.2.0",
   "description": "datepicker component for Vue 2.x",
-  "main": "dist/vue-date-picker.common.js",
-  "unpkg": "dist/vue-date-picker.umd.js",
+  "main": "dist/datepicker.common.js",
+  "unpkg": "dist/datepicker.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-date-picker ./src/vue-date-picker.vue",
+    "build": "vue-cli-service build --target lib --name datepicker ./src/vue-date-picker.vue",
     "lint": "vue-cli-service lint"
   },
   "repository": {
