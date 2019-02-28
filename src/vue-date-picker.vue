@@ -44,6 +44,7 @@
 }
 
 .datetime-picker th, .datetime-picker td {
+  overflow: hidden;
   user-select: none;
   width: 34px;
   height: 34px;
@@ -85,20 +86,17 @@
 .datetime-picker .show-year {
   display: inline-block;
   min-width: 66px;
-  vertical-align: middle;
 }
 
 .datetime-picker .show-month {
   display: inline-block;
   min-width: 32px;
-  vertical-align: middle;
 }
 
 .datetime-picker .btn-prev,
 .datetime-picker .btn-next {
   cursor: pointer;
-  display: inline-block;
-  padding: 0 11px;
+  padding: 8px 11px;
 }
 
 .datetime-picker .btn-prev::after,
