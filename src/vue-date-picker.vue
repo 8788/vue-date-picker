@@ -129,6 +129,7 @@
   <div class="datetime-picker">
     <input
         type="text"
+        v-bind="inputAttr"
         :name="name"
         :style="inputStyle"
         :class="inputClass"
@@ -175,6 +176,7 @@ export default {
     value: { type: String, default: '' },
     format: { type: String, default: 'YYYY-MM-DD' },
     name: { type: String, default: '' },
+    inputAttr: Object,
     inputStyle: [Object, Array],
     inputClass: [Object, Array]
   },
