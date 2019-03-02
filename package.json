@@ -1,6 +1,6 @@
 {
   "name": "vue-date-picker",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "datepicker component for Vue 2.x",
   "main": "dist/datepicker.common.js",
   "unpkg": "dist/datepicker.umd.js",
@@ -19,8 +19,8 @@
   },
   "files": [
     "src/vue-date-picker.vue",
-    "dist/vue-date-picker.common.js",
-    "dist/vue-date-picker.umd.js"
+    "dist/datepicker.common.js",
+    "dist/datepicker.umd.js"
   ],
   "keywords": [
     "vue",
