@@ -44,8 +44,9 @@ export default {
 | name                          | String             | --          | Input name property                      |
 | format                        | String             | YYYY-MM-DD  | Date formatting string                   |
 | readonly                      | String             | false       | Input readonly property                  |
-| input-class                   | Array\|Object      | --          | Binding class for input                  |
-| input-style                   | Array\|Object      | --          | Binding inline style for input           |
+| input-class                   | Array \| Object    | --          | Binding class for input                  |
+| input-style                   | Array \| Object    | --          | Binding inline style for input           |
+| input-attr                    | Object             | --          | Binding attribute for input              |
 
 ## License
 
