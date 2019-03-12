@@ -128,15 +128,20 @@
 <template>
   <div class="datetime-picker">
     <input
-        type="text"
-        v-bind="inputAttr"
-        :name="name"
-        :style="inputStyle"
-        :class="inputClass"
-        :readonly="readonly"
-        :value="pickedValue"
-        @click="show = !show">
-    <div class="picker-wrap" v-show="show">
+      type="text"
+      v-bind="inputAttr"
+      :name="name"
+      :style="inputStyle"
+      :class="inputClass"
+      :readonly="readonly"
+      :value="pickedValue"
+      @click="show = !show">
+    <div
+      class="picker-wrap"
+      v-bind="calendarAttr"
+      :style="calendarStyle"
+      :class="calendarClass"
+      v-show="show">
       <table class="date-picker">
         <thead>
           <tr class="date-head">
@@ -178,7 +183,10 @@ export default {
     name: { type: String, default: '' },
     inputAttr: Object,
     inputStyle: [Object, Array],
-    inputClass: [Object, Array]
+    inputClass: [Object, Array],
+    calendarAttr: Object,
+    calendarStyle: [Object, Array],
+    calendarClass: [Object, Array]
   },
   data () {
     return {
