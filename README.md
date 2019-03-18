@@ -47,6 +47,9 @@ export default {
 | input-class                   | Array \| Object    | --          | Binding class for input                  |
 | input-style                   | Array \| Object    | --          | Binding inline style for input           |
 | input-attr                    | Object             | --          | Binding attribute for input              |
+| calendar-class                | Array \| Object    | --          | Binding class for calendar               |
+| calendar-style                | Array \| Object    | --          | Binding inline style for calendar        |
+| calendar-attr                 | Object             | --          | Binding attribute for calendar           |
 
 ## License
 
