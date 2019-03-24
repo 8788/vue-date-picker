@@ -211,13 +211,13 @@ export default {
       this.show = false
     },
     update () {
-      var arr = []
-      var time = new Date(this.now)
+      let arr = []
+      let time = new Date(this.now)
       time.setMonth(time.getMonth(), 1) // the first day
-      var curFirstDay = time.getDay()
+      let curFirstDay = time.getDay()
       curFirstDay === 0 && (curFirstDay = 7)
       time.setDate(0) // the last day
-      var lastDayCount = time.getDate()
+      let lastDayCount = time.getDate()
       for (let i = curFirstDay; i > 0; i--) {
         arr.push({
           text: lastDayCount - i + 1,
@@ -227,9 +227,9 @@ export default {
       }
 
       time.setMonth(time.getMonth() + 2, 0) // the last day of this month
-      var curDayCount = time.getDate()
+      let curDayCount = time.getDate()
       time.setDate(1) // fix bug when month change
-      var value = this.pickedValue || this.stringify(new Date())
+      let value = this.pickedValue || this.stringify(new Date())
       for (let i = 0; i < curDayCount; i++) {
         let tmpTime = new Date(time.getFullYear(), time.getMonth(), i + 1)
         let status = ''
@@ -241,7 +241,7 @@ export default {
         })
       }
 
-      var j = 1
+      let j = 1
       while (arr.length < 42) {
         arr.push({
           text: j,
@@ -266,16 +266,16 @@ export default {
       this.pickedValue = this.stringify()
     },
     parse (str) {
-      var time = new Date(str)
+      let time = new Date(str)
       return isNaN(time.getTime()) ? null : time
     },
     stringify (time = this.now, format = this.format) {
-      var year = time.getFullYear()
-      var month = time.getMonth() + 1
-      var date = time.getDate()
-      var monthName = this.months[time.getMonth()]
+      let year = time.getFullYear()
+      let month = time.getMonth() + 1
+      let date = time.getDate()
+      let monthName = this.months[time.getMonth()]
 
-      var map = {
+      let map = {
         YYYY: year,
         MMM: monthName,
         MM: ('0' + month).slice(-2),
