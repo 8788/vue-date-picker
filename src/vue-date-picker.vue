@@ -186,7 +186,8 @@ export default {
     inputClass: [Object, Array],
     calendarAttr: Object,
     calendarStyle: [Object, Array],
-    calendarClass: [Object, Array]
+    calendarClass: [Object, Array],
+    disabledDate: { type: Function, default: () => false }
   },
   data () {
     return {
@@ -219,10 +220,12 @@ export default {
       time.setDate(0) // the last day
       let lastDayCount = time.getDate()
       for (let i = curFirstDay; i > 0; i--) {
+        let tmpTime = new Date(time.getFullYear(), time.getMonth(), lastDayCount - i + 1)
         arr.push({
           text: lastDayCount - i + 1,
-          time: new Date(time.getFullYear(), time.getMonth(), lastDayCount - i + 1),
-          status: 'date-pass'
+          time: tmpTime,
+          status: 'date-pass',
+          disabled: this.disabledDate(tmpTime)
         })
       }
 
@@ -237,16 +240,19 @@ export default {
         arr.push({
           text: i + 1,
           time: tmpTime,
-          status: status
+          status: status,
+          disabled: this.disabledDate(tmpTime)
         })
       }
 
       let j = 1
       while (arr.length < 42) {
+        let tmpTime = new Date(time.getFullYear(), time.getMonth() + 1, j)
         arr.push({
           text: j,
-          time: new Date(time.getFullYear(), time.getMonth() + 1, j),
-          status: 'date-future'
+          time: tmpTime,
+          status: 'date-future',
+          disabled: this.disabledDate(tmpTime)
         })
         j++
       }
