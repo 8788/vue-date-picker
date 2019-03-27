@@ -62,11 +62,20 @@
   background-color: #f0f0f0;
 }
 
-.datetime-picker td.date-pass, .datetime-picker td.date-future {
+.datetime-picker .date-disabled:not(.date-active) {
   color: #aaa;
 }
 
-.datetime-picker td.date-active {
+.datetime-picker .date-disabled:not(.date-active):hover {
+  background-color: transparent;
+}
+
+.datetime-picker .date-pass, .datetime-picker .date-future {
+  color: #aaa;
+}
+
+.datetime-picker .date-active,
+.datetime-picker .date-active:hover {
   background-color: #ececec;
   color: #3bb4f2;
 }
@@ -164,7 +173,10 @@
           <tr v-for="(v, i) in 6" :key="i">
             <td v-for="(v, j) in 7"
               :key="j"
-              :class="date[i * 7 + j] && date[i * 7 + j].status"
+              :class="[
+                date[i * 7 + j] ? date[i * 7 + j].status : '',
+                { 'date-disabled': date[i * 7 + j] && date[i * 7 + j].disabled }
+              ]"
               :date="date[i * 7 + j] && date[i * 7 + j].date"
               @click="pickDate(i * 7 + j)">{{date[i * 7 + j] && date[i * 7 + j].text}}</td>
           </tr>
