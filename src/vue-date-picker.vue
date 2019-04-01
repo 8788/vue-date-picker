@@ -63,7 +63,8 @@
 }
 
 .datetime-picker .date-disabled:not(.date-active) {
-  color: #aaa;
+  cursor: not-allowed;
+  color: #ccc;
 }
 
 .datetime-picker .date-disabled:not(.date-active):hover {
@@ -178,7 +179,7 @@
                 { 'date-disabled': date[i * 7 + j] && date[i * 7 + j].disabled }
               ]"
               :date="date[i * 7 + j] && date[i * 7 + j].date"
-              @click="pickDate(i * 7 + j)">{{date[i * 7 + j] && date[i * 7 + j].text}}</td>
+              @click="date[i * 7 + j] && !date[i * 7 + j].disabled && pickDate(i * 7 + j)">{{date[i * 7 + j] && date[i * 7 + j].text}}</td>
           </tr>
         </tbody>
       </table>
