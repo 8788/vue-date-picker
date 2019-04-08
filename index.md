@@ -50,6 +50,7 @@ export default {
 | calendar-class                | Array \| Object    | --          | Binding class for calendar               |
 | calendar-style                | Array \| Object    | --          | Binding inline style for calendar        |
 | calendar-attr                 | Object             | --          | Binding attribute for calendar           |
+| disabled-date                 | Function           | --          | A function that determines if you want to disable dates |
 
 ## License
 
